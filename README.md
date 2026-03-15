@@ -1,59 +1,86 @@
-# NetflixClone
+# Netflix Clone - Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.1.
+This is the **Angular 21** frontend for the Netflix Clone project.  
+It connects to the Spring Boot backend to display videos, handle authentication, and manage subscriptions.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🛠 Tech Stack
 
+- Angular 21
+- TypeScript
+- HTML5 & CSS3
+- SCSS
+- Bootstrap / Tailwind CSS
+- RxJS
+- Angular HTTP Client
+
+---
+
+## 🚀 Features
+
+- User registration & login (JWT secured via backend)
+- Browse videos by category
+- Play videos (video player integration)
+- Subscription management
+- Responsive design for desktop and mobile
+- Connects seamlessly to backend REST APIs
+
+---
+
+## 📂 Project Structure
+
+
+src/
+├─ app/
+│ ├─ components/ # UI components
+│ ├─ services/ # HTTP services for API calls
+│ ├─ models/ # TypeScript models/interfaces
+│ ├─ auth/ # Login/Register components & guards
+│ └─ app.module.ts
+├─ assets/ # Images & videos
+└─ environments/
+└─ environment.ts # API URL config
+
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1. Clone Repository
 ```bash
+git clone https://github.com/amannmishra/netflix-clone.git
+cd netflix-clone
+2. Install Dependencies
+npm install
+3. Run Development Server
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open browser at: http://localhost:4200/
 
-## Code scaffolding
+The app reloads automatically on changes
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+4. Connect to Backend
 
-```bash
-ng generate component component-name
-```
+Edit src/environments/environment.ts to point to your backend API:
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+export const environment = {
+  production: false,
+  apiUrl: 'http://localhost:8080/api'
+};
+🧪 Testing
 
-```bash
-ng generate --help
-```
+Run unit tests:
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
 ng test
-```
 
-## Running end-to-end tests
+Run e2e tests (optional):
 
-For end-to-end (e2e) testing, run:
-
-```bash
 ng e2e
-```
+📌 Notes
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Make sure the backend is running before starting the frontend
 
-## Additional Resources
+Optional: Add screenshots or GIFs of the app for better project presentation
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+This project is portfolio-ready, ideal for internship or job showcase
